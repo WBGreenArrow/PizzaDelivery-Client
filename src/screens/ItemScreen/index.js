@@ -7,7 +7,10 @@ import { Container,
          NameItem, 
          PriceItem, 
          ItemDescripton,
-         ViewImage} from './styles';
+         ViewImage,
+         PriceView,
+         ItemDescriptonView,
+         ItemTitleIngredient} from './styles';
 
 const PizzaOptions = [
     
@@ -26,7 +29,7 @@ const PizzaOptions = [
     {
         key: String(Math.random()),
         size: "G",
-        value: 35.00 
+        value: "R$35,00" 
     },
 
     {
@@ -75,20 +78,32 @@ export default function ItemScreen(){
     return(
 
             <Container>
+
                 <ViewImage>
+
                     <ItemImg source={ImgPizza}/>
+
                 </ViewImage>
 
                 <NameItem>Pizza de Calabresa</NameItem>
             
-                <PriceItem>{selectedValue}</PriceItem>    
-                 
+                <PriceView>
 
-                <ButtonPicker/>
-
-                
-
+                   <PriceItem>{selectedValue}</PriceItem>    
             
+                    <ButtonPicker/>
+
+                </PriceView>
+
+                <ItemDescriptonView>
+
+                    <ItemTitleIngredient>Ingredientes:</ItemTitleIngredient>
+                    
+                    <ItemDescripton>MOLHO DE TOMATE, MUSSARELA E CALABRESA</ItemDescripton>
+
+                </ItemDescriptonView>
+                
+                
             </Container>  
     )
 }

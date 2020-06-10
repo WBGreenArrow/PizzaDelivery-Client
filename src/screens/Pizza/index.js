@@ -8,7 +8,8 @@ import {Item,
         Texto, 
         Description, 
         ValueText, 
-        ImgPizza  } from './styles'
+        ImgPizza,
+        TextView      } from './styles'
 
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import ImgCalabres from './assets/pizza_calabresa.png'
@@ -100,9 +101,13 @@ export default function PizzaList(){
 
                             <ImgPizza source={item.img}/> 
 
-                            <Texto>{item.name.toUpperCase()}</Texto>
+                            <TextView>
 
-                            <Description>{item.description}</Description>
+                                <Texto>{item.name.toUpperCase()}</Texto>
+
+                                <Description>{item.description}</Description>
+
+                            </TextView>
 
                             <ValueText>{item.value}</ValueText>
 
